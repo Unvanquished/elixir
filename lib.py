@@ -24,8 +24,7 @@ import sys
 
 def script (*args):
     args = ('./script.sh',) + args
-    p = subprocess.run (args, stdout=subprocess.PIPE)
-    p = p.stdout
+    p = subprocess.check_output(args)
     return p
 
 def scriptLines (*args):
